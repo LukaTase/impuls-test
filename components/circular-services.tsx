@@ -1,0 +1,210 @@
+"use client"
+
+import type React from "react"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { Lightbulb, Building, PresentationIcon, Palmtree, Droplets, Crown } from "lucide-react"
+
+interface Service {
+  icon: React.ReactNode
+  name: string
+  description: string
+  link: string
+}
+
+export default function CircularServices() {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const services: Service[] = [
+    {
+      icon: <Lightbulb className="h-10 w-10" />,
+      name: "LED Lighting",
+      description: "Energy-efficient lighting solutions for commercial and industrial applications.",
+      link: "/services/led-lighting",
+    },
+    {
+      icon: <Building className="h-10 w-10" />,
+      name: "Building Construction",
+      description: "High-quality construction services for commercial and residential buildings.",
+      link: "/services/construction",
+    },
+    {
+      icon: <PresentationIcon className="h-10 w-10" />,
+      name: "Advertising Billboards",
+      description: "Strategic outdoor advertising solutions for maximum visibility and impact.",
+      link: "/services/billboards",
+    },
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M4 5v14" />
+          <path d="M20 5v14" />
+          <path d="M12 5v14" />
+          <path d="M4 12h16" />
+          <path d="m9 5 3-3 3 3" />
+          <path d="m9 19 3 3 3-3" />
+        </svg>
+      ),
+      name: "Underbold",
+      description: "Exclusive dealership for premium products and solutions.",
+      link: "/services/underbold",
+    },
+    {
+      icon: <Palmtree className="h-10 w-10" />,
+      name: "Mediterraneo",
+      description: "Premium Mediterranean products for discerning customers.",
+      link: "/services/mediterraneo",
+    },
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Simple plant pot */}
+          <path d="M8 22h8" /> {/* Pot base */}
+          <path d="M7 10v8c0 2 2 4 5 4s5-2 5-4v-8" /> {/* Pot body */}
+          <path d="M7 10h10" /> {/* Pot rim */}
+          <path d="M7 10c0-1.5.5-3 2.5-3s2.5 1.5 2.5 3" /> {/* Left pot handle */}
+          <path d="M17 10c0-1.5-.5-3-2.5-3s-2.5 1.5-2.5 3" /> {/* Right pot handle */}
+        </svg>
+      ),
+      name: "Terapot",
+      description: "Exclusive dealership for premium terapot products and accessories.",
+      link: "/services/terapot",
+    },
+    {
+      icon: <Droplets className="h-10 w-10" />,
+      name: "Ego Water",
+      description: "Premium water solutions for residential and commercial applications.",
+      link: "/services/ego-water",
+    },
+    {
+      icon: <Crown className="h-10 w-10" />,
+      name: "Kings Choice",
+      description: "Premium products for discerning customers with exclusive dealer network.",
+      link: "/services/kings-choice",
+    },
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="4" y="12" width="16" height="6" rx="2" />
+          <path d="M4 12V8c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v4" />
+          <path d="M8 18v2" />
+          <path d="M16 18v2" />
+        </svg>
+      ),
+      name: "Multisit",
+      description: "Innovative urban furniture that combines seating with advertising opportunities.",
+      link: "/services/multisit",
+    },
+  ]
+
+  // Rotate through services every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % services.length)
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [services.length])
+
+  return (
+    <div className="relative w-full max-w-5xl mx-auto h-[700px] md:h-[800px]">
+      {/* Center service display */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-white shadow-lg flex flex-col items-center justify-center text-center p-6 z-20">
+        <div className="text-red-600 mb-3">{services[activeIndex].icon}</div>
+        <h3 className="text-xl font-bold mb-2">{services[activeIndex].name}</h3>
+        <p className="text-gray-600 text-sm mb-4">{services[activeIndex].description}</p>
+        <Link
+          href={services[activeIndex].link}
+          className="text-blue-400 font-medium inline-flex items-center hover:underline"
+        >
+          Learn More
+          <ArrowRight className="ml-1 h-4 w-4" />
+        </Link>
+      </div>
+
+      {/* Circular arrangement of services */}
+      {services.map((service, index) => {
+        // Calculate position in circle
+        const angle = (index * (2 * Math.PI)) / services.length
+        const radius = 280 // Adjust based on your design
+        const x = Math.cos(angle) * radius
+        const y = Math.sin(angle) * radius
+
+        return (
+          <div
+            key={index}
+            className={`absolute top-1/2 left-1/2 w-20 h-20 rounded-full flex items-center justify-center transition-all duration-500 cursor-pointer ${
+              activeIndex === index
+                ? "bg-red-600 text-white shadow-[0_0_30px_rgba(220,38,38,0.6)]"
+                : "bg-white text-red-600 shadow-md hover:shadow-lg"
+            }`}
+            style={{
+              transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+              zIndex: activeIndex === index ? 10 : 5,
+            }}
+            onClick={() => setActiveIndex(index)}
+          >
+            <div className="scale-75">{service.icon}</div>
+          </div>
+        )
+      })}
+
+      {/* Light trail effect */}
+      <div
+        className="absolute top-1/2 left-1/2 w-full h-full pointer-events-none"
+        style={{ transform: "translate(-50%, -50%)" }}
+      >
+        <svg width="100%" height="100%" className="absolute inset-0">
+          <defs>
+            <radialGradient id="lightGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+              <stop offset="0%" stopColor="rgba(239, 68, 68, 0.2)" />
+              <stop offset="100%" stopColor="rgba(239, 68, 68, 0)" />
+            </radialGradient>
+          </defs>
+          <circle
+            cx="50%"
+            cy="50%"
+            r="280"
+            fill="none"
+            stroke="url(#lightGradient)"
+            strokeWidth="4"
+            strokeDasharray="20 10"
+            className="animate-spin-slow"
+          />
+        </svg>
+      </div>
+    </div>
+  )
+}
