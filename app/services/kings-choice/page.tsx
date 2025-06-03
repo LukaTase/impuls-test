@@ -61,7 +61,7 @@ export default function KingsChoicePage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg animate-slide-up"
+                className="bg-white hover:bg-gray-100 text-amber-600 rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all animate-slide-up"
                 style={{ animationDelay: "0.3s" }}
               >
                 <a href="https://kingschoice.rs/" target="_blank" rel="noopener noreferrer">
@@ -72,7 +72,7 @@ export default function KingsChoicePage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg animate-slide-up"
+                className="bg-white hover:bg-gray-100 text-amber-600 rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all animate-slide-up"
                 style={{ animationDelay: "0.4s" }}
               >
                 <a href="https://www.instagram.com/kingchoicemk/" target="_blank" rel="noopener noreferrer">
@@ -508,17 +508,11 @@ export default function KingsChoicePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("callToAction")}</h2>
           <p className="text-white/90 max-w-2xl mx-auto mb-8 text-lg">{t("callToActionSubtitle")}</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild className="bg-white text-amber-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg">
-              <Link href="/services/kings-choice/all-products" className="flex items-center">
-                <ShoppingBag className="mr-2 h-5 w-5" />
-                {t("shopNow")}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            
             <Button
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg"
+              className="bg-white text-amber-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg"
             >
               <a
                 href="https://www.instagram.com/kingchoicemk/"
@@ -533,7 +527,7 @@ export default function KingsChoicePage() {
             <Button
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg"
+              className="bg-white text-amber-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg"
             >
               <Link href="/contact" className="flex items-center">
                 {t("contactUs")}

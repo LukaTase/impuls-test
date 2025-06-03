@@ -801,7 +801,7 @@ export default function LedLightingPage() {
             <Button
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg"
+              className="bg-white text-red-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg"
             >
               <Link href="/services/led-lighting/products">
                 {t("browseAllProducts")}

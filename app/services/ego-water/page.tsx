@@ -98,7 +98,7 @@ export default function EgoWaterPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg animate-slide-up"
+                className="bg-white hover:bg-gray-100 text-blue-600 rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all animate-slide-up"
                 style={{ animationDelay: "0.3s" }}
               >
                 <a href="https://ego-water.com/" target="_blank" rel="noopener noreferrer">
@@ -434,7 +434,7 @@ export default function EgoWaterPage() {
             <Button
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 rounded-full px-8 py-6 text-lg"
             >
               <a href="https://ego-water.com/" target="_blank" rel="noopener noreferrer">
                 {t("visitOfficialWebsite")}

@@ -70,7 +70,7 @@ export default function MediterraneoPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg animate-slide-up"
+                className="bg-white hover:bg-gray-100 text-red-700 rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all animate-slide-up"
                 style={{ animationDelay: "0.3s" }}
               >
                 <a href="https://mediterraneo.mk/" target="_blank" rel="noopener noreferrer">
@@ -195,14 +195,15 @@ export default function MediterraneoPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] rounded-2xl overflow-hidden modern-shadow">
-              <Image
-                src="/vero.png?height=400&width=600&query=vero supermarket interior"
-                alt="VERO Market"
-                fill
-                className="object-cover"
-              />
-            </div>
+           <div className="relative h-auto w-full max-w-[600px] mx-auto rounded-2xl overflow-hidden modern-shadow">
+  <Image
+    src="/vero.png"
+    alt="VERO Market"
+    width={500}
+    height={600}
+    className="w-full h-auto object-contain"
+  />
+</div>
             <div>
               <h3 className="text-2xl font-bold mb-6">{t("veroMarketsTitle")}</h3>
               <p className="text-gray-700 mb-6">{t("veroMarketsDesc")}</p>
@@ -255,7 +256,7 @@ export default function MediterraneoPage() {
             <Button
               asChild
               variant="outline"
-              className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg"
+              className="bg-white text-red-700 hover:bg-gray-100 rounded-full px-8 py-6 text-lg"
             >
               <a href="https://mediterraneo.mk/" target="_blank" rel="noopener noreferrer">
                 {t("visitOfficialWebsite")}
