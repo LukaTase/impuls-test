@@ -30,35 +30,21 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative h-[90vh] w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10"></div>
-        <div className="absolute inset-0 bg-[#ed3237] z-0">
-          <div
-            className="absolute inset-0 opacity-20 mix-blend-overlay"
-            style={{
-              backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-            }}
-          ></div>
-        </div>
-        <div className="container relative z-20 mx-auto px-4 h-full flex flex-col justify-center items-start md:px-6">
-          <div className="max-w-3xl animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight animate-slide-up">
-              {getTranslation(language, "heroTitle")}
-            </h1>
-            <div className="mb-8 ">
-              <div className="flex items-center gap-6">
-                <div className="relative h-24 w-48 md:h-32 md:w-64">
-                  <Image src="/logo.png" alt="Impuls International" fill className="object-contain" priority />
-                </div>
-                <div className="text-white">
-                  <h2 className="text-2xl md:text-3xl font-bold tracking-wide"></h2>
-                </div>
-              </div>
+      <section className="relative h-[60vh] w-full overflow-hidden">
+        <div className="absolute inset-0 bg-[#ed3237] z-0"></div>
+        <div className="container relative z-20 mx-auto px-4 h-full flex flex-col justify-center items-center md:px-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight animate-slide-up">
+            {getTranslation(language, "heroTitle")}
+          </h1>
+          <div className="mb-8 flex flex-col items-center">
+            <div className="relative h-24 w-48 md:h-32 md:w-64 mb-4">
+              <Image src="/logo.png" alt="Impuls International" fill className="object-contain" priority />
             </div>
+          </div>
+          <div className="max-w-4xl text-center animate-fade-in">
             <Button
               asChild
-             className="bg-white hover:bg-gray-100 text-[#ed3237] rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all animate-slide-up"
+              className="bg-white hover:bg-gray-100 text-[#ed3237] rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
               <Link href="/about">
@@ -203,12 +189,12 @@ export default function Home() {
 
       {/* Call to Action */}
       <section className="py-24 relative overflow-hidden">
-       <div className="absolute inset-0 bg-gradient-to-r from-[#ed3237] to-[#f04c51] z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#ed3237] to-[#f04c51] z-0"></div>
         <div
           className="absolute inset-0 opacity-10 mix-blend-overlay"
           style={{
             backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
           }}
         ></div>
         <div className="container relative z-10 mx-auto px-4 md:px-6 text-center">

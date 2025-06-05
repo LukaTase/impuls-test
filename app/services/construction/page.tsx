@@ -140,20 +140,17 @@ export default function ConstructionPage() {
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-lg">92 m²</span>
+                        <span className="text-lg">150 m²</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-lg">125 m²</span>
+                        <span className="text-lg">72 m²</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-lg">125 m²</span>
+                        <span className="text-lg">48 m²</span>
                       </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-lg">131 m²</span>
-                      </li>
+                      
                     </ul>
                   </div>
 
@@ -300,19 +297,19 @@ export default function ConstructionPage() {
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-lg">92 m²</span>
+                        <span className="text-lg">120 m²</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-lg">125 m²</span>
+                        <span className="text-lg">78 m²</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-lg">125 m²</span>
+                        <span className="text-lg">55 m²</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-lg">131 m²</span>
+                        <span className="text-lg">48 m²</span>
                       </li>
                     </ul>
                   </div>
@@ -459,6 +456,18 @@ export default function ConstructionPage() {
                       <li className="flex items-start">
                         <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
                         <span className="text-lg">{t("commercialSpaces")}</span>
+                      </li>
+                       <li className="flex items-start">
+                        <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="text-lg">131 m²</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="text-lg">125 m²</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="text-lg">92 m²</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
@@ -708,7 +717,7 @@ export default function ConstructionPage() {
                     <div>
                       <p className="font-semibold text-xl mb-2">{t("phone")}</p>
                       <p className="text-gray-700">+389 2 3131113</p>
-                      <p className="text-gray-700">+389 75 200777</p>
+                      
                       
                     </div>
                   </div>

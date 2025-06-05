@@ -144,7 +144,7 @@ export default function MultisitPage() {
                 </div>
                 <div className="flex items-start">
                   <Phone className="h-5 w-5 text-red-600 mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">+389 2 3109 795</span>
+                  <span className="text-gray-700">+389 2 3131 113</span>
                 </div>
                 <div className="flex items-start">
                   <Mail className="h-5 w-5 text-red-600 mr-3 flex-shrink-0 mt-0.5" />

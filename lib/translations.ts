@@ -28,7 +28,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     addressLine2: "1/11",
     addressLine3: "1000, Skopje",
     addressLine4: "North Macedonia",
-    phoneNumber: "+389  75/200-777",
+    phoneNumber: "+389  2 3131 113",
     emailAddress: "info@impuls-international.com",
     businessHours: "Business Hours",
     mondayFriday: "Monday - Friday:",
@@ -346,7 +346,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     traditionalPatterns: "Traditional Patterns",
     ourCatalog: "Our Catalog",
     catalogSubtitle: "Explore our collection of Mediterranean home goods in our interactive catalog",
-    catalogTitle: "Mediterraneo Collection 2023",
+    catalogTitle: "Mediterraneo Collection 2025",
     catalogDesc:
       "Discover our complete range of Mediterranean trays, bowls, and table cloths in our interactive catalog.",
     openOnlineCatalog: "Open Online Catalog",
@@ -784,7 +784,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     addressLine2: "1/11",
     addressLine3: "1000, Скопје",
     addressLine4: "Северна Македонија",
-    phoneNumber: "+ 389  75/200-777",
+    phoneNumber: "+ 389  2 3131 113",
     emailAddress: "info@impuls-international.com",
     businessHours: "Работно време",
     mondayFriday: "Понеделник - Петок:",
@@ -800,7 +800,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     switchToEnglish: "EN",
 
     // Hero section
-    heroTitle: "ИНСПИРАЦИИ ИНОВАЦИИ ИМПУЛС",
+    heroTitle: "ИНСПИРАЦИИ ИНОВАЦИИ",
     learnMore: "Дознајте повеќе",
 
     // Mission section
@@ -1114,7 +1114,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     traditionalPatterns: "Традиционални мотиви",
     ourCatalog: "Нашиот каталог",
     catalogSubtitle: "Истражете ја нашата колекција на медитерански производи за дома во нашиот интерактивен каталог",
-    catalogTitle: "Mediterraneo Колекција 2023",
+    catalogTitle: "Mediterraneo Колекција 2025",
     catalogDesc:
       "Откријте го нашиот целосен асортиман на медитерански послужавници, чинии и чаршафи за маса во нашиот интерактивен каталог.",
     openOnlineCatalog: "Отворете онлајн каталог",

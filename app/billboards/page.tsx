@@ -694,7 +694,7 @@ export default function BillboardsPage() {
                     <div>
                       <p className="font-semibold text-xl mb-2 text-white">{t("phone")}</p>
                       <p className="text-white/90">+389 2 3131113</p>
-                      <p className="text-white/90">+389 75 200777</p>
+                    
                     </div>
                   </div>
                   <div className="flex items-start animate-slide-left" style={{ animationDelay: "0.2s" }}>
