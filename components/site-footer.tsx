@@ -95,7 +95,7 @@ export default function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/undebold" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/services/underbold" className="text-gray-400 hover:text-white transition-colors">
                   Underbold
                 </Link>
               </li>

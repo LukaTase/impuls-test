@@ -360,7 +360,7 @@ export default function KingsChoicePage() {
                   <Star key={i} className="h-5 w-5 text-amber-500 fill-amber-500" />
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 italic">"{t("testimonial1")}"</p>
+              <p className="text-gray-700 mb-6 italic">"{t("testimonial11")}"</p>
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
                   <span className="font-bold text-amber-700">SL</span>
@@ -378,7 +378,7 @@ export default function KingsChoicePage() {
                   <Star key={i} className="h-5 w-5 text-amber-500 fill-amber-500" />
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 italic">"{t("testimonial2")}"</p>
+              <p className="text-gray-700 mb-6 italic">"{t("testimonial22")}"</p>
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
                   <span className="font-bold text-amber-700">DR</span>
@@ -396,7 +396,7 @@ export default function KingsChoicePage() {
                   <Star key={i} className="h-5 w-5 text-amber-500 fill-amber-500" />
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 italic">"{t("testimonial3")}"</p>
+              <p className="text-gray-700 mb-6 italic">"{t("testimonial33")}"</p>
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
                   <span className="font-bold text-amber-700">JT</span>

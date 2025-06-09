@@ -387,9 +387,9 @@ export default function BillboardsPage() {
           <div className="bg-gray-50 rounded-2xl p-8 modern-shadow">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Map Visualization - Replace with actual map */}
-              <div className="lg:col-span-2 relative h-[500px] rounded-xl overflow-hidden">
+              <div className="lg:col-span-2 relative h-[600px] rounded-xl overflow-hidden">
                 <Image
-                  src="/world-map.jpg"
+                  src="/mk.png"
                   alt={language === "en" ? "Billboard Coverage Map" : "Мапа на покриеност со билборди"}
                   fill
                   className="object-cover"

@@ -181,15 +181,15 @@ export const translations: Record<Language, TranslationDictionary> = {
     testimonials: "Testimonials",
     testimonialsTitle: "What Pet Parents Are Saying",
     testimonialsSubtitle: "Hear from dog owners who have made King's Choice part of their pet's daily routine",
-    testimonial1:
+    testimonial11:
       "My Golden Retriever Max absolutely loves the Berry Boost juice! I've noticed a significant improvement in his energy levels and coat shine since adding it to his diet.",
     testimonial1Author: "Sarah L.",
     testimonial1Role: "Golden Retriever owner",
-    testimonial2:
+    testimonial22:
       "As a veterinarian, I'm very particular about what I recommend for pets. King's Choice stands out for its quality ingredients and nutritional benefits. I recommend it to all my clients.",
     testimonial2Author: "Dr. Robert M.",
     testimonial2Role: "Veterinarian",
-    testimonial3:
+    testimonial33:
       "My senior Labrador has been struggling with joint issues. After trying the Blueberry juice for a month, I've noticed she's moving more comfortably and seems happier. Thank you, King's Choice!",
     testimonial3Author: "James T.",
     testimonial3Role: "Labrador owner",
@@ -941,15 +941,15 @@ export const translations: Record<Language, TranslationDictionary> = {
     testimonialsTitle: "Што велат родителите на миленичиња",
     testimonialsSubtitle:
       "Слушнете од сопствениците на кучиња кои го направиле King's Choice дел од секојдневната рутина на нивниот миленик",
-    testimonial1:
+    testimonial11:
       "Мојот Златен Ретривер Макс апсолутно го обожава сокот од малини! Забележав значително подобрување на неговото ниво на енергија и сјајот на крзното откако го додадов во неговата исхрана.",
     testimonial1Author: "Сара Л.",
     testimonial1Role: "Сопственик на Златен Ретривер",
-    testimonial2:
+    testimonial22:
       "Како ветеринар, многу сум внимателен за тоа што препорачувам за миленичиња. King's Choice се истакнува по своите квалитетни состојки и нутритивни придобивки. Го препорачувам на сите мои клиенти.",
     testimonial2Author: "Д-р Роберт М.",
     testimonial2Role: "Ветеринар",
-    testimonial3:
+    testimonial33:
       "Мојот постар Лабрадор се бореше со проблеми со зглобовите. По пробувањето на сокот од боровинки еден месец, забележав дека се движи поудобно и изгледа посреќно. Ви благодарам, King's Choice!",
     testimonial3Author: "Џејмс Т.",
     testimonial3Role: "Сопственик на Лабрадор",

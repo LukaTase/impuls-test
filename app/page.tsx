@@ -7,9 +7,25 @@ import { ArrowRight } from "lucide-react"
 import CircularServices from "@/components/circular-services"
 import { useLanguage } from "@/components/language-context"
 import { getTranslation } from "@/lib/translations"
+import { useEffect, useState } from "react"
 
 export default function Home() {
   const { language } = useLanguage()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Function to wrap each letter in a span for animation
+  const wrapLetters = (text: string) => {
+    if (!text) return null
+    return text.split("").map((letter, index) => (
+      <span key={index} style={{ animationDelay: `${index * 0.1}s` }}>
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ))
+  }
 
   // Partner logos data
   const partners = [
@@ -27,32 +43,41 @@ export default function Home() {
     { name: "Vero", logo: "/vero.png", url: "https://vero.com.mk/marketi/" },
   ]
 
+  const heroTitle = getTranslation(language, "heroTitle")
+
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative h-[60vh] w-full overflow-hidden">
+      <section className="relative h-[90vh] w-full overflow-hidden">
         <div className="absolute inset-0 bg-[#ed3237] z-0"></div>
         <div className="container relative z-20 mx-auto px-4 h-full flex flex-col justify-center items-center md:px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight animate-slide-up">
-            {getTranslation(language, "heroTitle")}
-          </h1>
-          <div className="mb-8 flex flex-col items-center">
-            <div className="relative h-24 w-48 md:h-32 md:w-64 mb-4">
-              <Image src="/logo.png" alt="Impuls International" fill className="object-contain" priority />
-            </div>
-          </div>
-          <div className="max-w-4xl text-center animate-fade-in">
-            <Button
-              asChild
-              className="bg-white hover:bg-gray-100 text-[#ed3237] rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all animate-slide-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <Link href="/about">
-                {getTranslation(language, "learnMore")}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
+          {mounted && (
+            <>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight letter-animation text-center">
+                {wrapLetters(heroTitle)}
+              </h1>
+              <div className="relative h-32 w-80 md:h-40 md:w-96 mb-8 logo-animation">
+                <Image
+                  src="/logo.png"
+                  alt="Impuls International"
+                  fill
+                  className="object-contain logo-blend"
+                  priority
+                />
+              </div>
+              <div className="max-w-4xl text-center animate-fade-in-up" style={{ animationDelay: "3s" }}>
+                <Button
+                  asChild
+                  className="bg-white hover:bg-gray-100 text-[#ed3237] rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all"
+                >
+                  <Link href="/about">
+                    {getTranslation(language, "learnMore")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </>
+          )}
         </div>
       </section>
 
@@ -194,7 +219,7 @@ export default function Home() {
           className="absolute inset-0 opacity-10 mix-blend-overlay"
           style={{
             backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
           }}
         ></div>
         <div className="container relative z-10 mx-auto px-4 md:px-6 text-center">
@@ -215,6 +240,63 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <style jsx>{`
+        .letter-animation span {
+          display: inline-block;
+          opacity: 0;
+          animation: letterFadeIn 0.5s ease-out forwards;
+        }
+
+        @keyframes letterFadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .logo-animation {
+          opacity: 0;
+          animation: logoShow 1s ease-out forwards;
+          animation-delay: 2s;
+        }
+
+        .logo-blend {
+          mix-blend-mode: screen;
+          filter: brightness(1.2) contrast(1.1);
+        }
+
+        @keyframes logoShow {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s ease-out forwards;
+          opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </main>
   )
 }
